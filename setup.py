@@ -9,13 +9,13 @@ os.chdir(os.path.normpath(os.path.join(os.path.abspath(__file__), os.pardir)))
 
 setup(
     name='srvup-comments',
-    version='1.0',
+    version='1.0.4',
     packages=find_packages(),
     include_package_data=True,
-    license='BSD License',  # example license
+    license='MIT License',  # example license
     description='A simple Django app to handle comments with Javascript!',
     long_description=README,
-    url='https://www.srvup.com/',
+    url='https://github.com/srvup/srvup-comments',
     author='Justin Mitchel',
     author_email='hello@teamcfe.com',
     classifiers=[

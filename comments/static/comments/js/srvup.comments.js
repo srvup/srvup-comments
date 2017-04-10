@@ -17,13 +17,13 @@
 
 $(document).ready(function(){
     // var endpoint = 'http://127.0.0.1:8000/api/comments/'
-    var dataUrl = $(".cfe-load-comments").attr("data-url")
-    var endpoint = $(".cfe-load-comments").attr("data-api-endpoint") || "/api/comments/"
-    var loginUrl = $(".cfe-load-comments").attr("data-login") || '/accounts/login/'
+    var dataUrl = $(".srvup-load-comments").attr("data-url")
+    var endpoint = $(".srvup-load-comments").attr("data-api-endpoint") || "/api/comments/"
+    var loginUrl = $(".srvup-load-comments").attr("data-login") || '/accounts/login/'
     // console.log(endpoint)
     var isUser = false;
     var authUsername;
-    $(".cfe-load-comments").after("<div class='form-container'></div>")
+    $(".srvup-load-comments").after("<div class='form-container'></div>")
 
     getComments(dataUrl)
      
@@ -57,7 +57,7 @@ $(document).ready(function(){
         isUser = $.parseJSON(getCookie('isUser'));
         authUsername = String(getCookie('authUsername'));
         
-        $(".cfe-load-comments").html('<h3>Comments</h3>')
+        $(".srvup-load-comments").html('<h3>Comments</h3>')
         $.ajax({
           method: "GET",
           url: endpoint,
@@ -68,7 +68,7 @@ $(document).ready(function(){
             if (data.length > 0){
               
                 $.each(data, function(index, object){
-                  $(".cfe-load-comments").append(renderCommentLine(object))
+                  $(".srvup-load-comments").append(renderCommentLine(object))
               })
             }
             var formHtml = generateForm()
@@ -116,7 +116,7 @@ $(document).ready(function(){
         success: function(data){
           console.log(data)
           // getComments(dataUrl)
-          $(".cfe-load-comments").append(renderCommentLine(data))
+          $(".srvup-load-comments").append(renderCommentLine(data))
           var formHtml = generateForm()
           $(".form-container").html(formHtml)
         },
