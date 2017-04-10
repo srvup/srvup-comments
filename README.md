@@ -7,7 +7,10 @@ A reusable Django & Javascript app (jQuery) for simply implementing a comments f
 Quick start
 -----------
 1. Install Srvup Comments:
+
+    ```
     pip install srvup-comments
+    ```
     
 
 2. Install Django Dependancies:
