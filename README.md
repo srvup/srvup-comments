@@ -93,7 +93,7 @@ Quick start
     <script src='{% static "comments/js/srvup.comments.js" %}'></script>
 
     <!-- CSRF Safe For Ajax -->
-    <script src='{% static "comments/js/srvup.safe.js" %}'></script>
+    <script src='{% static "comments/js/srvup.safeajax.js" %}'></script>
     ```
 
 7. Run Django Commands:
